@@ -1,0 +1,108 @@
+{
+  "base": {
+    "registros_brutos": 58736,
+    "moleculas": 8000,
+    "n_atributos": 1024,
+    "classes": [
+      "BACE1",
+      "DRD2",
+      "EGFR",
+      "HDAC1"
+    ],
+    "n_treino": 6400,
+    "n_teste": 1600
+  },
+  "experimento_A": {
+    "melhor_por_kernel": {
+      "rbf": 0.9734066617166064,
+      "poly": 0.9732008719204451,
+      "linear": 0.9634012719077252
+    },
+    "config_vencedora": {
+      "kernel": "rbf",
+      "C": "10.0",
+      "gamma": "scale"
+    },
+    "amplitude_f1": 0.8624171393597461
+  },
+  "experimento_B": {
+    "amplitude_f1": 0.004764467923920379,
+    "cenarios": [
+      {
+        "cenario": "StandardScaler",
+        "acuracia": 0.9728,
+        "f1_macro": 0.9734,
+        "desvio": 0.0035
+      },
+      {
+        "cenario": "MinMaxScaler",
+        "acuracia": 0.9777,
+        "f1_macro": 0.9782,
+        "desvio": 0.0011
+      },
+      {
+        "cenario": "Sem normalização",
+        "acuracia": 0.9777,
+        "f1_macro": 0.9782,
+        "desvio": 0.0011
+      }
+    ]
+  },
+  "experimento_C": {
+    "expoente_tempo": 2.442438442636094,
+    "ganho_final": 0.001956128160663262
+  },
+  "teste_final": {
+    "acuracia": 0.986875,
+    "f1_macro": 0.987021529878213,
+    "f1_ponderado": 0.9868784499978065,
+    "acuracia_balanceada": 0.9867159290386693,
+    "mcc": 0.9824296952526128
+  },
+  "vetores_suporte": {
+    "total": 3687,
+    "proporcao": 0.57609375
+  },
+  "comparacao": [
+    {
+      "modelo": "SVM (rbf)",
+      "acuracia": 0.9869,
+      "f1_macro": 0.987,
+      "mcc": 0.9824,
+      "tempo_treino_s": 10.8104,
+      "tempo_predicao_s": 3.587
+    },
+    {
+      "modelo": "Random Forest",
+      "acuracia": 0.98,
+      "f1_macro": 0.9803,
+      "mcc": 0.9733,
+      "tempo_treino_s": 1.2453,
+      "tempo_predicao_s": 0.0972
+    },
+    {
+      "modelo": "Regressão Logística",
+      "acuracia": 0.9756,
+      "f1_macro": 0.9759,
+      "mcc": 0.9674,
+      "tempo_treino_s": 1.8689,
+      "tempo_predicao_s": 0.0119
+    },
+    {
+      "modelo": "kNN (k=5)",
+      "acuracia": 0.9406,
+      "f1_macro": 0.9399,
+      "mcc": 0.9216,
+      "tempo_treino_s": 0.1056,
+      "tempo_predicao_s": 2.7263
+    },
+    {
+      "modelo": "Classe majoritária",
+      "acuracia": 0.2856,
+      "f1_macro": 0.1111,
+      "mcc": 0.0,
+      "tempo_treino_s": 0.0005,
+      "tempo_predicao_s": 0.0001
+    }
+  ]
+}

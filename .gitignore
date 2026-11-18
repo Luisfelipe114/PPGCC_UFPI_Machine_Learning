@@ -39,3 +39,4 @@ Thumbs.db
 mlruns/
 .mlflow/
 *.log
+
