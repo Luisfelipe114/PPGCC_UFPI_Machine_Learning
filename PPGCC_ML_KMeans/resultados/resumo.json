@@ -1,7 +1,8 @@
 {
   "base": {
     "registros_brutos": 58736,
-    "moleculas": 8000,
+    "moleculas_amostra": 8000,
+    "moleculas_completas": 37404,
     "n_atributos": 1024,
     "classes_removidas": [
       "BACE1",
@@ -12,94 +13,86 @@
   },
   "experimento_k": {
     "melhor_k_silhueta": 9,
+    "metricas_melhor_k": {
+      "k": 9,
+      "inercia": 298223.2188,
+      "silhueta": 0.0513,
+      "ari": 0.3635,
+      "nmi": 0.5074,
+      "homogeneidade": 0.6221,
+      "completude": 0.4285,
+      "v_measure": 0.5074,
+      "pureza": 0.7959
+    },
     "resultados": [
       {
         "k": 2,
         "inercia": 335262.3125,
         "silhueta": 0.036,
-        "calinski_harabasz": 234.6923,
-        "davies_bouldin": 5.6779,
         "n_iter": 16,
-        "tempo_s": 15.749
+        "tempo_s": 1.3105
       },
       {
         "k": 3,
         "inercia": 326508.9062,
         "silhueta": 0.0433,
-        "calinski_harabasz": 227.6736,
-        "davies_bouldin": 4.5435,
         "n_iter": 26,
-        "tempo_s": 3.1238
+        "tempo_s": 1.5621
       },
       {
         "k": 4,
         "inercia": 320119.0938,
         "silhueta": 0.0339,
-        "calinski_harabasz": 207.9935,
-        "davies_bouldin": 4.8456,
         "n_iter": 39,
-        "tempo_s": 3.2026
+        "tempo_s": 2.1502
       },
       {
         "k": 5,
         "inercia": 314112.5938,
         "silhueta": 0.0428,
-        "calinski_harabasz": 197.1797,
-        "davies_bouldin": 4.2271,
-        "n_iter": 20,
-        "tempo_s": 3.4802
+        "n_iter": 21,
+        "tempo_s": 2.2666
       },
       {
         "k": 6,
         "inercia": 310875.5938,
         "silhueta": 0.0404,
-        "calinski_harabasz": 176.0139,
-        "davies_bouldin": 4.3277,
         "n_iter": 20,
-        "tempo_s": 12.8861
+        "tempo_s": 2.8663
       },
       {
         "k": 7,
         "inercia": 305241.0625,
         "silhueta": 0.0488,
-        "calinski_harabasz": 173.958,
-        "davies_bouldin": 3.9161,
         "n_iter": 30,
-        "tempo_s": 62.2654
+        "tempo_s": 3.7999
       },
       {
         "k": 8,
         "inercia": 301322.1562,
         "silhueta": 0.0511,
-        "calinski_harabasz": 165.8753,
-        "davies_bouldin": 3.8533,
         "n_iter": 19,
-        "tempo_s": 54.907
+        "tempo_s": 5.4136
       },
       {
         "k": 9,
         "inercia": 298223.2188,
         "silhueta": 0.0513,
-        "calinski_harabasz": 157.0103,
-        "davies_bouldin": 4.1121,
         "n_iter": 36,
-        "tempo_s": 38.5865
+        "tempo_s": 5.6951
       },
       {
         "k": 10,
         "inercia": 295711.875,
         "silhueta": 0.047,
-        "calinski_harabasz": 148.2723,
-        "davies_bouldin": 4.1725,
         "n_iter": 33,
-        "tempo_s": 8.6909
+        "tempo_s": 6.0465
       }
     ]
   },
   "kmeans_k4_bruto": {
     "metricas": {
       "silhueta": 0.0339,
-      "davies_bouldin": 4.8456,
       "ari": 0.4754,
       "nmi": 0.5403,
       "homogeneidade": 0.5324,
@@ -115,7 +108,7 @@
       "2": "DRD2",
       "3": "EGFR"
     },
-    "tempo_s": 7.01
+    "tempo_s": 5.502
   },
   "comparacao_representacoes": [
     {
@@ -127,7 +120,7 @@
       "acuracia_alinhada": 0.771,
       "f1_macro_alinhado": 0.7766,
       "silhueta": 0.0339,
-      "tempo_s": 11.4436
+      "tempo_s": 5.1422
     },
     {
       "cenario": "ECFP4 + StandardScaler",
@@ -138,7 +131,7 @@
       "acuracia_alinhada": 0.423,
       "f1_macro_alinhado": 0.3375,
       "silhueta": 0.012,
-      "tempo_s": 8.6122
+      "tempo_s": 4.4867
     },
     {
       "cenario": "ECFP4 + Normalização L2",
@@ -149,7 +142,7 @@
       "acuracia_alinhada": 0.7792,
       "f1_macro_alinhado": 0.784,
       "silhueta": 0.0374,
-      "tempo_s": 11.6367
+      "tempo_s": 4.3478
     },
     {
       "cenario": "ECFP4 + PCA (50 comp.)",
@@ -160,7 +153,116 @@
       "acuracia_alinhada": 0.7685,
       "f1_macro_alinhado": 0.7744,
       "silhueta": 0.0711,
-      "tempo_s": 0.7853
+      "tempo_s": 0.2888
     }
-  ]
+  ],
+  "experimento_escalabilidade": {
+    "expoente_tempo": 1.079,
+    "resultados": [
+      {
+        "n_amostras": 8000,
+        "representacao": "ECFP4 bruto",
+        "ari": 0.4754,
+        "nmi": 0.5403,
+        "v_measure": 0.5403,
+        "pureza": 0.771,
+        "acuracia_alinhada": 0.771,
+        "f1_macro_alinhado": 0.7766,
+        "silhueta": 0.0339,
+        "n_iter": 39,
+        "tempo_s": 4.4487
+      },
+      {
+        "n_amostras": 8000,
+        "representacao": "ECFP4 + L2",
+        "ari": 0.4923,
+        "nmi": 0.5403,
+        "v_measure": 0.5403,
+        "pureza": 0.7792,
+        "acuracia_alinhada": 0.7792,
+        "f1_macro_alinhado": 0.784,
+        "silhueta": 0.0374,
+        "n_iter": 11,
+        "tempo_s": 4.2493
+      },
+      {
+        "n_amostras": 16000,
+        "representacao": "ECFP4 bruto",
+        "ari": 0.4665,
+        "nmi": 0.532,
+        "v_measure": 0.532,
+        "pureza": 0.7659,
+        "acuracia_alinhada": 0.7659,
+        "f1_macro_alinhado": 0.7714,
+        "silhueta": 0.0335,
+        "n_iter": 85,
+        "tempo_s": 9.5835
+      },
+      {
+        "n_amostras": 16000,
+        "representacao": "ECFP4 + L2",
+        "ari": 0.4871,
+        "nmi": 0.5313,
+        "v_measure": 0.5313,
+        "pureza": 0.7761,
+        "acuracia_alinhada": 0.7761,
+        "f1_macro_alinhado": 0.78,
+        "silhueta": 0.0364,
+        "n_iter": 29,
+        "tempo_s": 9.5621
+      },
+      {
+        "n_amostras": 24000,
+        "representacao": "ECFP4 bruto",
+        "ari": 0.4617,
+        "nmi": 0.5325,
+        "v_measure": 0.5325,
+        "pureza": 0.764,
+        "acuracia_alinhada": 0.764,
+        "f1_macro_alinhado": 0.7704,
+        "silhueta": 0.0331,
+        "n_iter": 19,
+        "tempo_s": 14.1194
+      },
+      {
+        "n_amostras": 24000,
+        "representacao": "ECFP4 + L2",
+        "ari": 0.4855,
+        "nmi": 0.5327,
+        "v_measure": 0.5327,
+        "pureza": 0.7755,
+        "acuracia_alinhada": 0.7755,
+        "f1_macro_alinhado": 0.7797,
+        "silhueta": 0.0364,
+        "n_iter": 55,
+        "tempo_s": 14.1671
+      },
+      {
+        "n_amostras": 37404,
+        "representacao": "ECFP4 bruto",
+        "ari": 0.4609,
+        "nmi": 0.5347,
+        "v_measure": 0.5347,
+        "pureza": 0.7639,
+        "acuracia_alinhada": 0.7639,
+        "f1_macro_alinhado": 0.7707,
+        "silhueta": 0.0334,
+        "n_iter": 57,
+        "tempo_s": 23.856
+      },
+      {
+        "n_amostras": 37404,
+        "representacao": "ECFP4 + L2",
+        "ari": 0.4899,
+        "nmi": 0.5389,
+        "v_measure": 0.5389,
+        "pureza": 0.7781,
+        "acuracia_alinhada": 0.7781,
+        "f1_macro_alinhado": 0.783,
+        "silhueta": 0.036,
+        "n_iter": 47,
+        "tempo_s": 25.5268
+      }
+    ]
+  }
 }
