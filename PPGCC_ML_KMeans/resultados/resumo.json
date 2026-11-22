@@ -1,0 +1,166 @@
+{
+  "base": {
+    "registros_brutos": 58736,
+    "moleculas": 8000,
+    "n_atributos": 1024,
+    "classes_removidas": [
+      "BACE1",
+      "DRD2",
+      "EGFR",
+      "HDAC1"
+    ]
+  },
+  "experimento_k": {
+    "melhor_k_silhueta": 9,
+    "resultados": [
+      {
+        "k": 2,
+        "inercia": 335262.3125,
+        "silhueta": 0.036,
+        "calinski_harabasz": 234.6923,
+        "davies_bouldin": 5.6779,
+        "n_iter": 16,
+        "tempo_s": 15.749
+      },
+      {
+        "k": 3,
+        "inercia": 326508.9062,
+        "silhueta": 0.0433,
+        "calinski_harabasz": 227.6736,
+        "davies_bouldin": 4.5435,
+        "n_iter": 26,
+        "tempo_s": 3.1238
+      },
+      {
+        "k": 4,
+        "inercia": 320119.0938,
+        "silhueta": 0.0339,
+        "calinski_harabasz": 207.9935,
+        "davies_bouldin": 4.8456,
+        "n_iter": 39,
+        "tempo_s": 3.2026
+      },
+      {
+        "k": 5,
+        "inercia": 314112.5938,
+        "silhueta": 0.0428,
+        "calinski_harabasz": 197.1797,
+        "davies_bouldin": 4.2271,
+        "n_iter": 20,
+        "tempo_s": 3.4802
+      },
+      {
+        "k": 6,
+        "inercia": 310875.5938,
+        "silhueta": 0.0404,
+        "calinski_harabasz": 176.0139,
+        "davies_bouldin": 4.3277,
+        "n_iter": 20,
+        "tempo_s": 12.8861
+      },
+      {
+        "k": 7,
+        "inercia": 305241.0625,
+        "silhueta": 0.0488,
+        "calinski_harabasz": 173.958,
+        "davies_bouldin": 3.9161,
+        "n_iter": 30,
+        "tempo_s": 62.2654
+      },
+      {
+        "k": 8,
+        "inercia": 301322.1562,
+        "silhueta": 0.0511,
+        "calinski_harabasz": 165.8753,
+        "davies_bouldin": 3.8533,
+        "n_iter": 19,
+        "tempo_s": 54.907
+      },
+      {
+        "k": 9,
+        "inercia": 298223.2188,
+        "silhueta": 0.0513,
+        "calinski_harabasz": 157.0103,
+        "davies_bouldin": 4.1121,
+        "n_iter": 36,
+        "tempo_s": 38.5865
+      },
+      {
+        "k": 10,
+        "inercia": 295711.875,
+        "silhueta": 0.047,
+        "calinski_harabasz": 148.2723,
+        "davies_bouldin": 4.1725,
+        "n_iter": 33,
+        "tempo_s": 8.6909
+      }
+    ]
+  },
+  "kmeans_k4_bruto": {
+    "metricas": {
+      "silhueta": 0.0339,
+      "davies_bouldin": 4.8456,
+      "ari": 0.4754,
+      "nmi": 0.5403,
+      "homogeneidade": 0.5324,
+      "completude": 0.5485,
+      "v_measure": 0.5403,
+      "pureza": 0.771,
+      "acuracia_alinhada": 0.771,
+      "f1_macro_alinhado": 0.7766
+    },
+    "mapeamento_otimo": {
+      "0": "HDAC1",
+      "1": "BACE1",
+      "2": "DRD2",
+      "3": "EGFR"
+    },
+    "tempo_s": 7.01
+  },
+  "comparacao_representacoes": [
+    {
+      "cenario": "ECFP4 bruto (0/1)",
+      "ari": 0.4754,
+      "nmi": 0.5403,
+      "v_measure": 0.5403,
+      "pureza": 0.771,
+      "acuracia_alinhada": 0.771,
+      "f1_macro_alinhado": 0.7766,
+      "silhueta": 0.0339,
+      "tempo_s": 11.4436
+    },
+    {
+      "cenario": "ECFP4 + StandardScaler",
+      "ari": 0.0887,
+      "nmi": 0.2732,
+      "v_measure": 0.2732,
+      "pureza": 0.4469,
+      "acuracia_alinhada": 0.423,
+      "f1_macro_alinhado": 0.3375,
+      "silhueta": 0.012,
+      "tempo_s": 8.6122
+    },
+    {
+      "cenario": "ECFP4 + Normalização L2",
+      "ari": 0.4923,
+      "nmi": 0.5403,
+      "v_measure": 0.5403,
+      "pureza": 0.7792,
+      "acuracia_alinhada": 0.7792,
+      "f1_macro_alinhado": 0.784,
+      "silhueta": 0.0374,
+      "tempo_s": 11.6367
+    },
+    {
+      "cenario": "ECFP4 + PCA (50 comp.)",
+      "ari": 0.4701,
+      "nmi": 0.5363,
+      "v_measure": 0.5363,
+      "pureza": 0.7685,
+      "acuracia_alinhada": 0.7685,
+      "f1_macro_alinhado": 0.7744,
+      "silhueta": 0.0711,
+      "tempo_s": 0.7853
+    }
+  ]
+}
